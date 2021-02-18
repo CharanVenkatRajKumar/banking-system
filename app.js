@@ -10,9 +10,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 const User = require('./models/user');
 const Transaction = require('./models/transaction');
 
-//DB - paisa //
-//COLLECTION 1 - users //
-//COLLECTION 2 - transactions //
+
 mongoose.connect("mongodb+srv://charan:charankumar@cluster0.pjxme.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true

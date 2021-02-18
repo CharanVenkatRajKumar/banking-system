@@ -1,27 +1,32 @@
 <%- include("partials/header") %>
 
-
+<div class="lastone">
 <div class="form-body1">
-    <h1>Transferring From : </h1>
+    <h1> From : </h1>
     <h3>Customer Name : <%= fromUser.name %></h3>
-    <h3>Credits = <%= fromUser.credits %></h3>
+    <h3>Amount = <%= fromUser.credits %></h3>
 </div>
 
 <div class="form-body2">
-    <h1>Transferring To : </h1>
+    <h1> To : </h1>
     <h3>Customer Name : <%= toUser.name %></h3>
-    <h3>Credits = <%= toUser.credits %></h3>
+    <h3>Amount = <%= toUser.credits %></h3>
 </div>
 
 <div class="form">
     <form action="/view/<%= fromUser._id %>/<%= toUser._id %>?_method=PUT" method="POST">
-    <label for="credits">No. of Credits to be transferred :</label>
+    <label for="credits">Amount to be transferred :</label>
     <br>
     <input type="number" id="credit" name="credit" placeholder="" value="">
     <br>
-    <button class="transfer2-btn" type="submit">Transfer</button>
+    <button class="transfer2-btn" type="submit">Send</button>
     </form>
 </div>
+</div>
+<aside>
+    <img src="/images/image1.jpg" alt="">
+</aside>
+
 
 
 <%- include("partials/footer") %>
